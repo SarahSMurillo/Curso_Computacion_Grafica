@@ -232,7 +232,7 @@ int main() {
 		//Hacer pata cuatro de la mesa
 		model = glm::mat4(1.0f); //iniciando otra matriz
 		model = glm::scale(model, glm::vec3(0.1f, 0.6f, 0.1f)); //tamaño de la pata
-		model = glm::translate(model, glm::vec3(2.9f, -0.6f, -1.9f));
+		model = glm::translate(model, glm::vec3(2.9f, -0.6f, -1.9f)); //
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		
