@@ -1,5 +1,5 @@
-//Previo 3             Murillo Rodriguez Sarah Sofia
-//16/02/2026           422130448
+//Practica 3             Murillo Rodriguez Sarah Sofia
+//21/02/2026           422130448
 #include<iostream>
 
 //#define GLEW_STATIC
@@ -17,6 +17,7 @@
 // Shaders
 #include "Shader.h"
 
+
 const GLint WIDTH = 800, HEIGHT = 600;
 
 
@@ -31,7 +32,7 @@ int main() {
 
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecciones y transformaciones basicas", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecciones y transformaciones basicas", nullptr, nullptr);
 
 	int screenWidth, screenHeight;
 
@@ -119,51 +120,51 @@ int main() {
 	//	-0.5f * 500,  0.5f * 500,  0.5f * 500, 1.0f, 0.2f,0.5f,
 	//	-0.5f * 500,  0.5f * 500, -0.5f * 500, 1.0f, 0.2f,0.5f,
 	//};
-	
+
 
 	 //use with Perspective Projection
 	float vertices[] = { //cubo en perspectiva
-		-0.5f, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,//Front
-		0.5f, -0.5f, 0.5f,  1.0f, 0.0f,0.0f,
-		0.5f,  0.5f, 0.5f,  1.0f, 0.0f,0.0f,
-		0.5f,  0.5f, 0.5f,  1.0f, 0.0f,0.0f,
-		-0.5f,  0.5f, 0.5f, 1.0f, 0.0f,0.0f,
-		-0.5f, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,
-		
-	    -0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,//Back
-		 0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-		 0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-		 0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	    -0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	    -0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-		
-		 0.5f, -0.5f,  0.5f,  0.0f, 0.0f,1.0f,
-		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f,1.0f,
-		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f,1.0f,
-		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f,1.0f,
-		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f,1.0f,
-		 0.5f,  -0.5f, 0.5f, 0.0f, 0.0f,1.0f,
-      
-		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f,0.0f,
-		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f,0.0f,
-		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f,0.0f,
-		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f,0.0f,
-		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f,0.0f,
-		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f,0.0f,
-		
-		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
-		0.5f, -0.5f, -0.5f,  0.0f, 1.0f,1.0f,
-		0.5f, -0.5f,  0.5f,  0.0f, 1.0f,1.0f,
-		0.5f, -0.5f,  0.5f,  0.0f, 1.0f,1.0f,
-		-0.5f, -0.5f,  0.5f, 0.0f, 1.0f,1.0f,
-		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
-		
-		-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
-		0.5f,  0.5f, -0.5f,  1.0f, 0.2f,0.5f,
-		0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
-		0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
-		-0.5f,  0.5f,  0.5f, 1.0f, 0.2f,0.5f,
-		-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
+		-0.5f, -0.5f, 0.5f, 1.0f, 0.75f, 0.85f,//Front
+		0.5f, -0.5f, 0.5f,  1.0f, 0.75f, 0.85f,
+		0.5f,  0.5f, 0.5f,  1.0f, 0.75f, 0.85f,
+		0.5f,  0.5f, 0.5f,  1.0f, 0.75f, 0.85f,
+		-0.5f,  0.5f, 0.5f, 1.0f, 0.75f, 0.85f,
+		-0.5f, -0.5f, 0.5f, 1.0f, 0.75f, 0.85f,
+
+		-0.5f, -0.5f,-0.5f, 1.0f, 0.4f, 0.7f,//Back
+		 0.5f, -0.5f,-0.5f, 1.0f, 0.4f, 0.7f,
+		 0.5f,  0.5f,-0.5f, 1.0f, 0.4f, 0.7f,
+		 0.5f,  0.5f,-0.5f, 1.0f, 0.4f, 0.7f,
+		-0.5f,  0.5f,-0.5f, 1.0f, 0.4f, 0.7f,
+		-0.5f, -0.5f,-0.5f, 1.0f, 0.4f, 0.7f,
+
+		 0.5f, -0.5f,  0.5f,  1.0f, 0.2f, 0.6f,
+		 0.5f, -0.5f, -0.5f,  1.0f, 0.2f, 0.6f,
+		 0.5f,  0.5f, -0.5f,  1.0f, 0.2f, 0.6f,
+		 0.5f,  0.5f, -0.5f,  1.0f, 0.2f, 0.6f,
+		 0.5f,  0.5f,  0.5f,  1.0f, 0.2f, 0.6f,
+		 0.5f,  -0.5f, 0.5f,  1.0f, 0.2f, 0.6f,
+
+		-0.5f,  0.5f,  0.5f,  0.9f, 0.1f, 0.4f,
+		-0.5f,  0.5f, -0.5f,  0.9f, 0.1f, 0.4f,
+		-0.5f, -0.5f, -0.5f,  0.9f, 0.1f, 0.4f,
+		-0.5f, -0.5f, -0.5f,  0.9f, 0.1f, 0.4f,
+		-0.5f, -0.5f,  0.5f,  0.9f, 0.1f, 0.4f,
+		-0.5f,  0.5f,  0.5f,  0.9f, 0.1f, 0.4f,
+
+		-0.5f, -0.5f, -0.5f, 0.95f, 0.6f, 0.7f,
+		0.5f, -0.5f, -0.5f,  0.95f, 0.6f, 0.7f,
+		0.5f, -0.5f,  0.5f,  0.95f, 0.6f, 0.7f,
+		0.5f, -0.5f,  0.5f,  0.95f, 0.6f, 0.7f,
+		-0.5f, -0.5f,  0.5f, 0.95f, 0.6f, 0.7f,
+		-0.5f, -0.5f, -0.5f, 0.95f, 0.6f, 0.7f,
+
+		-0.5f,  0.5f, -0.5f, 0.75f, 0.15f, 0.35f,
+		0.5f,  0.5f, -0.5f,  0.75f, 0.15f, 0.35f,
+		0.5f,  0.5f,  0.5f,  0.75f, 0.15f, 0.35f,
+		0.5f,  0.5f,  0.5f,  0.75f, 0.15f, 0.35f,
+		-0.5f,  0.5f,  0.5f, 0.75f, 0.15f, 0.35f,
+		-0.5f,  0.5f, -0.5f, 0.75f, 0.15f, 0.35f,
 	};
 
 
@@ -187,11 +188,11 @@ int main() {
 	// 4. Despues colocamos las caracteristicas de los vertices
 
 	//Posicion
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid *)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
 	glEnableVertexAttribArray(0);
 
 	//Color
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid *)(3 * sizeof(GLfloat)));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
 	glEnableVertexAttribArray(1);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -199,8 +200,8 @@ int main() {
 
 	glBindVertexArray(0); // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs)
 
-	
-	glm::mat4 projection=glm::mat4(1);
+
+	glm::mat4 projection = glm::mat4(1);
 
 	projection = glm::perspective(45.0f, (GLfloat)screenWidth / (GLfloat)screenHeight, 0.1f, 100.0f);//FOV, Radio de aspecto,znear,zfar
 	//projection = glm::ortho(0.0f, (GLfloat)screenWidth, 0.0f, (GLfloat)screenHeight, 0.1f, 1000.0f);//Izq,Der,Fondo,Alto,Cercania,Lejania
@@ -211,7 +212,7 @@ int main() {
 
 		// Render
 		// Clear the colorbuffer
-		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+		glClearColor(0.12f, 0.12f, 0.16f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
@@ -219,10 +220,11 @@ int main() {
 		ourShader.Use();
 		glm::mat4 model = glm::mat4(1);
 		glm::mat4 view = glm::mat4(1);
-		 //caja 1
-		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -12.0f));
-		model = glm::rotate(model, 0.5f, glm::vec3(0.0f, 1.0f, 0.0f)); // use to compare orthographic and perspective projection
-		model = glm::scale(model, glm::vec3(2.0f, 3.0f, 1.0f));
+		//caja 1
+		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -5.0f)); //izqder/---/arribaabajo/--- camara
+		model = glm::rotate(model, 0.5f, glm::vec3(0.0f, 0.17f, 0.0f)); // use to compare orthographic and perspective projection
+		model = glm::scale(model, glm::vec3(1.50f, 1.50f, 1.50f)); //1.15, 1.0, 0.70
+		model = glm::translate(model, glm::vec3(0.0f, -1.0f, 0.0f)); //mueve el modelo
 		//view = glm::translate( view, glm::vec3( screenWidth / 2, screenHeight / 10,-800.0f ) ); // use with orthographic projection
 
 		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
@@ -236,23 +238,52 @@ int main() {
 
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
-		model = glm:: mat4(1); //agregando nuevo elemento
-		model = glm::translate(model, glm::vec3(5.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, 45.0f, glm::vec3(0.0f, 0.0f, 1.0f)); // use to compare orthographic and perspective projection
-		model = glm::scale(model, glm::vec3(8.0f, 1.0f, 5.0f));
+
+		//caja 2
+		model = glm::mat4(1); //agregando nuevo elemento
+		//model = glm::translate(model, glm::vec3(0.0f, -3.00f, -3.0f)); camara
+		model = glm::rotate(model, 45.0f, glm::vec3(0.0f, 0.25f, 0.0f)); // use to compare orthographic and perspective projection
+		model = glm::scale(model, glm::vec3(1.00f, 1.00f, 1.00f));
+		model = glm::translate(model, glm::vec3(0.35f, -0.25f, 0.60f)); //mueve el modelo
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model)); //mandando info al Shader
+		glDrawArrays(GL_TRIANGLES, 0, 36); //dibujando de nuevo la caja
+		//fin caja 2
+
+
+		// Caja 3
+		model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(-4.0f, 2.0f, -3.0f)); camara
+		model = glm::translate(model, glm::vec3(1.25f, 0.70f, -1.15f)); //mueve el modelo
+		model = glm::scale(model, glm::vec3(0.85f, 0.85f, 0.85f)); //medidas
+		model = glm::rotate(model, 35.0f, glm::vec3(0.0f, 1.00f, 0.0f)); //giro
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
+		//fin caja 3
+
+		// Caja 4
+		model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(-4.0f, 2.0f, -3.0f)); camara
+		model = glm::translate(model, glm::vec3(1.10f, 1.50f, -1.30f)); //mueve el modelo
+		model = glm::scale(model, glm::vec3(0.55f, 0.55f, 0.55f)); //medidas
+		model = glm::rotate(model, 30.0f, glm::vec3(0.0f, -0.14f, 0.0f)); //giro
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		//fin caja 4
+
+		//Caja 5
+		model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(-4.0f, 2.0f, -3.0f)); camara
+		model = glm::translate(model, glm::vec3(1.05f, 1.95f, -1.30f)); //mueve el modelo
+		model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f)); //medidas
+		model = glm::rotate(model, 30.0f, glm::vec3(0.0f, 0.23f, 0.0f)); //giro
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		//fin caja 5
+
 		glBindVertexArray(0);
-
-
-
-		
-		
-		
-
 		// Swap the screen buffers
 		glfwSwapBuffers(window);
-	
+
 	}
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
@@ -261,7 +292,7 @@ int main() {
 	glfwTerminate();
 	return EXIT_SUCCESS;
 
-  
+
 
 }
 
