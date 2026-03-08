@@ -30,10 +30,6 @@ float muneca = 0.0f;
 float dedo1 = 0.0f;
 float dedo2 = 0.0f;
 float dedo3 = 0.0f;
-float dedo4 = 0.0f;
-float dedo5= 0.0f;
-float dedo6 = 0.0f;
-float apertura = 0.0f;
 
 // AQUÍ
 float max1 = 30.0f;
@@ -346,7 +342,7 @@ int main() {
 
 		//Model Dedo 4 A falange 1/3
 		model = glm::translate(modelTemp2, glm::vec3(0.25f, -0.35f, 0.375f));
-		model = glm::rotate(model, glm::radians(dedo4), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(-dedo1), glm::vec3(0.0f, 0.0f, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
@@ -357,7 +353,7 @@ int main() {
 
 		//Model Dedo 4 B falange 2/3
 		model = glm::translate(modelTemp, glm::vec3(0.5f, 0.0f, 0.0f));
-		model = glm::rotate(model, glm::radians(dedo5), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(-dedo2), glm::vec3(0.0f, 0.0f, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
@@ -368,7 +364,7 @@ int main() {
 
 		//Model Dedo 4 C falange 3/3
 		model = glm::translate(modelTemp, glm::vec3(0.5f, 0.0f, 0.0f));
-		model = glm::rotate(model, glm::radians(dedo6), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(-dedo3), glm::vec3(0.0f, 0.0f, 1.0f));
 		modelTemp =model= glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(1.0f, 1.0f, 1.0f);
@@ -380,7 +376,7 @@ int main() {
 
 		//Model Dedo 5 A falange 1/3
 		model = glm::translate(modelTemp2, glm::vec3(0.25f, -0.35f, -0.375f));
-		model = glm::rotate(model, glm::radians(dedo4), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(-dedo1), glm::vec3(0.0f, 0.0f, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
@@ -390,7 +386,7 @@ int main() {
 
 		//Model Dedo 5 B falange 2/3
 		model = glm::translate(modelTemp, glm::vec3(0.5f, 0.0f, 0.0f));
-		model = glm::rotate(model, glm::radians(dedo5), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(-dedo2), glm::vec3(0.0f, 0.0f, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
@@ -401,7 +397,7 @@ int main() {
 
 		//Model Dedo 5 C falange 3/3
 		model = glm::translate(modelTemp, glm::vec3(0.5f, 0.0f, 0.0f));
-		model = glm::rotate(model, glm::radians(dedo6), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(-dedo3), glm::vec3(0.0f, 0.0f, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(1.0f, 1.0f, 1.0f);
@@ -460,12 +456,8 @@ int main() {
 		 if (dedo1 < max1) dedo1 += 0.05f;
 		 if (dedo2 < max2) dedo2 += 0.05f;
 		 if (dedo3 > -max3) dedo3 -= 0.03f;
-
-		 if (dedo4 > -max1) dedo4 -= 0.05f;
-		 if (dedo5 > -max2) dedo5 -= 0.05f;
-		 if (dedo6 > -max3) dedo6 += 0.05f;
+		
 	 }
-	
 
 	 if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
 	 {
@@ -473,15 +465,14 @@ int main() {
 		 if (dedo2 > min2) dedo2 -= 0.05f;
 		 if (dedo3 < 0) dedo3 += 0.03f;
 
-		 if (dedo4 < 0) dedo4 += 0.05f;
-		 if (dedo5 < 0) dedo5 += 0.05f;
-		 if (dedo6 < 0) dedo6 -= 0.03f;
+	
 	 }
 	 if (glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS) 
 	 { 
-		 dedo1 = 0.0f; dedo2 = 0.0f; 
-		 dedo3 = 0.0f; dedo4 = 0.0f; 
-		 dedo5 = 0.0f; dedo6 = 0.0f; 
+		 dedo1 = 0.0f; 
+		 dedo2 = 0.0f; 
+		 dedo3 = 0.0f;
+		
 	 }
   }
 
