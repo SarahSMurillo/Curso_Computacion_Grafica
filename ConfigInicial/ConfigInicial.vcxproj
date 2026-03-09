@@ -19,14 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shader\core.frag" />
-    <None Include="Shader\core.vs" />
+    <ClCompile Include="Carga de Modelos.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Modelado_Jerarquico.cpp" />
+    <None Include="Shader\modelLoading.frag" />
+    <None Include="Shader\modelLoading.vs" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -86,13 +87,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\lib;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\SOIL2\lib;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>soil2-debug.lib;assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -103,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\lib;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\SOIL2\lib;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>soil2-debug.lib;assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,13 +119,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\lib;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\SOIL2\lib;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>soil2-debug.lib;assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -135,13 +136,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLEW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\GLFW\include;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\assimp\lib;C:\Users\sasom\Desktop\Curso_Computacion_Grafica\External Libraries\SOIL2\lib;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLFW\lib-vc2015;C:\Users\sasom\Documents\CompuGrafica\ConfigInicial\External Libraries\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>soil2-debug.lib;assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
