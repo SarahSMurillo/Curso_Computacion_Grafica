@@ -1,5 +1,5 @@
-//Previo 6       Murillo Rodriguez Sarah Sofia
-//08/03/2026       422130448
+//Practica 6       Murillo Rodriguez Sarah Sofia
+//15/03/2026       422130448
 
 
 
@@ -99,8 +99,9 @@ int main( )
     Shader shader( "Shader/modelLoading.vs", "Shader/modelLoading.frag" );
     
     // Load models
-    Model dog((char*)"Models/RedDog.obj");//NUEVO
-    Model dog2((char*)"Models/Fox.obj");//NUEVO perro 2
+    //Model dog((char*)"Models/RedDog.obj");//NUEVO
+    //Model dog2((char*)"Models/Fox.obj");//NUEVO perro 2
+    Model espacio((char*)"Models/Untitled.obj");
     glm::mat4 projection = glm::perspective(camera.GetZoom(), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f);
   
 
@@ -117,7 +118,7 @@ int main( )
         DoMovement();
 
         // Clear the colorbuffer
-        glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shader.Use();
@@ -129,19 +130,20 @@ int main( )
         // Draw the loaded model
         glm::mat4 model(1);
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        dog.Draw(shader); //Nuevo
-        //Aplicaciones de transformaciones
-        model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
-        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        dog.Draw(shader);
-        
-        //Dibujo perro2
-        glm::mat4 modeldog2(1);
-        modeldog2 = glm::translate(modeldog2, glm::vec3(-2.0f, 0.0f, 0.0f));
-        modeldog2 = glm::rotate(modeldog2, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(modeldog2));
-        dog2.Draw(shader);
+        espacio.Draw(shader);
+        //dog.Draw(shader); //Nuevo
+        ////Aplicaciones de transformaciones
+        //model = glm::translate(model, glm::vec3(0.0f, 1.0f, 0.0f));
+        //model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+        //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+       // dog.Draw(shader);
+        //
+        ////Dibujo perro2
+        //glm::mat4 modeldog2(1);
+        //modeldog2 = glm::translate(modeldog2, glm::vec3(-2.0f, 0.0f, 0.0f));
+        //modeldog2 = glm::rotate(modeldog2, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(modeldog2));
+        //dog2.Draw(shader);
 
 
         // Swap the buffers

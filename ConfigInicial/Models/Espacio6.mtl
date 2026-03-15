@@ -1,0 +1,83 @@
+# Blender 5.0.1 MTL File: 'Espacio.blend'
+# www.blender.org
+
+newmtl Mat
+Ns 64.000023
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd C:/Users/sasom/Documents/Cohehte/1001_Base_Color.png
+map_Ks C:/Users/sasom/Documents/Cohehte/1001_Metallic.png
+
+newmtl Material.003
+Ns 324.000031
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/sasom/Documents/Planeta/planet 1_Sky Material_BaseColor.png
+
+newmtl Material.004
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/sasom/Documents/Planeta2/venus.jpg
+
+newmtl Material.005
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/sasom/Documents/Planeta2/venus.jpg
+
+newmtl RedDog_Red_Dog_Default
+Ns 39.999996
+Ka 1.000000 1.000000 1.000000
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Texture_albedo.jpg
+
+newmtl UFO_texture
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd C:/Users/sasom/Documents/Ovni/ufo_diffuse.png
+map_Ke C:/Users/sasom/Documents/Ovni/ufo_diffuse_glow.png
+map_d C:/Users/sasom/Documents/Ovni/ufo_diffuse.png
+map_Bump -bm 0.200000 C:/Users/sasom/Documents/Ovni/Map__7_Normal_Bump.tga
+
+newmtl UFO_texture2
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/sasom/Documents/Ovni/ufo_diffuse2.png
+map_Ke C:/Users/sasom/Documents/Ovni/ufo_diffuse2_glow.png
+
+newmtl rock
+Ns 324.000031
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/sasom/Documents/Roca/RockTexture001_diffuse.png
