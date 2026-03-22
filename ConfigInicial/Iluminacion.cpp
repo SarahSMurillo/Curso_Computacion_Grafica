@@ -85,6 +85,7 @@ int main()
     Shader lampshader("Shader/lamp.vs", "Shader/lamp.frag");
     Shader lightingShader("Shader/lighting.vs", "Shader/lighting.frag");
 
+    //Cargando modelos
     Model red_dog((char*)"Models/RedDog.obj");
     Model perro1((char*)"Models/perro1.obj");
 
@@ -209,16 +210,13 @@ int main()
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.6f, 0.6f, 0.6f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 0.6f);
 
-       
-        
-        
-        
-
+        //Transformaciones de los modelos
         //Modelo perro original
         glm::mat4 model(1);
         model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
+        //Dibujando modelo 1
         red_dog.Draw(lightingShader);
 
         //Modelo perro1
@@ -227,10 +225,13 @@ int main()
         modelPerro1 = glm::translate(modelPerro1, glm::vec3(0.0f, -1.0f, 2.0f));
         modelPerro1 = glm::scale(modelPerro1, glm::vec3(0.10f, 0.10f, 0.10f));
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(modelPerro1));
+        //Dibujando modelo 2
         perro1.Draw(lightingShader);
-
         glBindVertexArray(0);
 
+
+        //Creando bloques de luz
+        //Bloque d eluz original
         lampshader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lampshader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(lampshader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
@@ -243,7 +244,7 @@ int main()
         glBindVertexArray(0);
 
 
-        //Luz2
+        // Creando bloque de Luz2
         lampshader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lampshader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(lampshader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
