@@ -1,0 +1,26 @@
+# Blender 4.1.1 MTL File: 'WIndow01.blend'
+# www.blender.org
+
+newmtl Glass01
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.705263
+illum 6
+map_Kd Textures/Window1/WIndow01_Glass01_BaseColor.png
+map_Ns Textures/Window1/WIndow01_Glass01_OcclusionRoughnessMetallic.png
+map_refl Textures/Window1/WIndow01_Glass01_OcclusionRoughnessMetallic.png
+map_Bump -bm 1.000000 Textures/Window1/WIndow01_Glass01_Normal.png
+
+newmtl Window_Painted
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Textures/Window1/WIndow01_Window_Painted_BaseColor.png
+map_Ns Textures/Window1/WIndow01_Window_Painted_OcclusionRoughnessMetallic.png
+map_refl Textures/Window1/WIndow01_Window_Painted_OcclusionRoughnessMetallic.png
+map_Bump -bm 1.000000 Textures/Window1/WIndow01_Window_Painted_Normal.png
