@@ -1,5 +1,5 @@
 //Practica 10    Murillo Rodriguez Sarah Sofia
-//18-04-26     422130448
+//17-04-26     422130448
 
 #include <iostream>
 #include <cmath>
