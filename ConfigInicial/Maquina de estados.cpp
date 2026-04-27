@@ -1,5 +1,5 @@
-//Previo 11    Murillo Rodriguez Sarah Sofia
-//18-04-26     422130448
+//Practica 11    Murillo Rodriguez Sarah Sofia
+//27-04-26     422130448
 
 #include <iostream>
 #include <cmath>
@@ -116,6 +116,17 @@ glm::vec3 dogPos(0.0f, 0.0f, 0.0f);
 float dogRot = 0.0f;
 bool step = false;
 
+// Waypoints para el recorrido del perro
+glm::vec3 waypoints[] = {
+	glm::vec3(0.0f, 0.0f,  2.4f),  // 0: avanza al frente (borde norte)
+	glm::vec3(2.4f, 0.0f,  2.4f),  // 1: gira izquierda, recorre borde derecho-frente
+	glm::vec3(2.4f, 0.0f, -2.4f),  // 2: gira izquierda, recorre borde derecho-atras
+	glm::vec3(-2.4f, 0.0f, -2.4f),  // 3: gira izquierda, recorre borde izquierdo-atras
+	glm::vec3(0.0f, 0.0f,  0.0f),  // 4: diagonal de regreso al centro
+};
+int totalWaypoints = 5;
+int currentWaypoint = 0;
+float targetRot = 0.0f; // rotacion objetivo para el giro suave
 
 
 // Deltatime
@@ -507,6 +518,7 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 		dogAnim = 1;
 	}
 }
+
 void Animation() {
 	if (AnimBall)
 	{
@@ -520,7 +532,31 @@ void Animation() {
 		//printf("%f", rotBall);
 	}
 	if (dogAnim == 1) { //caminando
-		if (dogPos.z < 2.3f) { //limitante del pasto, ajusta este valor segun tu modelo
+		float speed = 0.8f; // velocidad constante en unidades por segundo
+
+		glm::vec3 dir = waypoints[currentWaypoint] - dogPos;
+		float dist = glm::length(dir);
+
+		if (dist > 0.01f) { //limitante del pasto, ajusta este valor segun tu modelo
+			// Mover hacia el waypoint actual con velocidad constante usando deltaTime
+			glm::vec3 move = glm::normalize(dir) * speed * deltaTime;
+			dogPos += move;
+
+			// Calcular rotacion objetivo hacia donde camina
+			targetRot = glm::degrees(atan2(dir.x, dir.z));
+
+			// Giro suave: interpolar dogRot hacia targetRot gradualmente
+			float diff = targetRot - dogRot;
+
+			// Normalizar la diferencia entre -180 y 180 para girar por el camino mas corto
+			while (diff > 180.0f)  diff -= 360.0f;
+			while (diff < -180.0f) diff += 360.0f;
+
+			if (abs(diff) > 0.5f)
+				dogRot += diff * 8.0f * deltaTime; // giro suave, ajusta 8.0f para mas lento/rapido
+			else
+				dogRot = targetRot;
+
 			if (!step) {
 				RLegs += 0.3f;
 				FLegs += 0.3f;
@@ -537,14 +573,14 @@ void Animation() {
 				if (RLegs < -15.0f) //limitante piernas
 					step = false;
 			}
-			dogPos.z += 0.001f; //velocidad
 		}
 		else { //detener al perro cuando termina el pasto
-			dogAnim = 0;
-			RLegs = 0.0f;
-			FLegs = 0.0f;
-			head = 0.0f;
-			tail = 0.0f;
+			// Llego al waypoint: avanzar al siguiente
+			dogPos = waypoints[currentWaypoint];
+			currentWaypoint++;
+
+			if (currentWaypoint >= totalWaypoints)
+				currentWaypoint = 0; // reinicia el recorrido (loop)
 		}
 	}
 
