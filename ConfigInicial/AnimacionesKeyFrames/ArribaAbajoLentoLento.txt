@@ -1,0 +1,64 @@
+# Animacion KeyFrames
+# Formato: nombre_variable valor
+frames 4
+steps 190
+
+[keyframe 0]
+dogPosX 0
+dogPosY 0
+dogPosZ 0
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot 0
+bodyRotx 0
+dogPosY_offset 0.238
+
+[keyframe 1]
+dogPosX 0
+dogPosY 0
+dogPosZ 0
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot 1.24
+bodyRotx 0
+dogPosY_offset 0.453998
+
+[keyframe 2]
+dogPosX 0
+dogPosY 0
+dogPosZ 0
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot 1.24
+bodyRotx 0
+dogPosY_offset 0.153
+
+[keyframe 3]
+dogPosX 0
+dogPosY 0
+dogPosZ 0
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot 1.24
+bodyRotx 0
+dogPosY_offset -0.263

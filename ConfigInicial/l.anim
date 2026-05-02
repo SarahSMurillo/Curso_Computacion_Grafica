@@ -1,0 +1,79 @@
+# Animacion KeyFrames
+# Formato: nombre_variable valor
+frames 5
+steps 190
+
+[keyframe 0]
+dogPosX 0
+dogPosY 0
+dogPosZ 0.64
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot 0
+bodyRotx 0
+dogPosY_offset 0
+
+[keyframe 1]
+dogPosX 0
+dogPosY 0
+dogPosZ -0.46
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot 0
+bodyRotx 0
+dogPosY_offset 0
+
+[keyframe 2]
+dogPosX -1.19
+dogPosY 0
+dogPosZ -0.46
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot -0.64
+bodyRotx 0
+dogPosY_offset 0
+
+[keyframe 3]
+dogPosX -1.19
+dogPosY 0
+dogPosZ -1.09
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot -0.21
+bodyRotx 0
+dogPosY_offset 0.391998
+
+[keyframe 4]
+dogPosX -0.7
+dogPosY 0
+dogPosZ -0.43
+rotDog 0
+head 0
+headPitch 0
+tail 0
+F_LeftLegRot 0
+F_RightLegRot 0
+B_LeftLegRot 0
+B_RightLegRot -0.71
+bodyRotx 0
+dogPosY_offset 0.391998
